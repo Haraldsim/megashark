@@ -66,6 +66,11 @@ class RoomsTable extends Table
             ->integer('capacity')
             ->requirePresence('capacity', 'create')
             ->notEmpty('capacity');
+            
+        $validator
+            ->scalar('releaseYear')
+            ->requirePresence('releaseYear', 'create')
+            ->notEmpty('releaseYear');
 
         return $validator;
     }
